@@ -2,7 +2,7 @@
 
 **Six AI personalities. One subscription. Yours.**
 
-[🌐 Visit TEOS](http://144.202.19.248:8081/)
+[🌐 Visit TEOS](https://teos.sh) (coming soon)
 
 ## The Souls
 
