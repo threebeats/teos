@@ -31,3 +31,9 @@
 ---
 
 *Built by threebeats. Every soul is a promise kept.*
+
+
+## Visit
+
+The Emporium of Souls — six AI personalities, one subscription, yours.
+https://threebeats.github.io/teos/
