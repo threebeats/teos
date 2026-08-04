@@ -1,95 +1,13 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width,initial-scale=1.0">
-<title>The Emporium of Souls</title>
-<style>
-*{margin:0;padding:0;box-sizing:border-box;}
-body{
-  background:#0c0a14;
-  color:#e2e8f0;
-  font-family:'Georgia','Times New Roman',serif;
-  min-height:100vh;
-  display:flex;
-  justify-content:center;
-  align-items:center;
-  text-align:center;
-  padding:2rem;
-  line-height:1.8;
-}
-.stars{
-  position:fixed;top:0;left:0;right:0;bottom:0;
-  background:radial-gradient(ellipse at 50% 0%,#1a0a2e 0%,#0c0a14 70%);
-  z-index:-1;
-}
-.container{max-width:500px;}
-.mark{font-size:2.5rem;margin-bottom:1rem;opacity:0.6;}
-h1{font-size:1.6rem;font-weight:400;color:#a5b4fc;margin-bottom:0.5rem;letter-spacing:0.05em;}
-.tagline{color:#818cf8;font-style:italic;margin-bottom:2rem;font-size:0.95rem;}
-
-.grid{display:grid;grid-template-columns:1fr 1fr;gap:0.8rem;margin-bottom:2rem;}
-.soul{background:#12121a;border:1px solid #1e1e2e;border-radius:8px;padding:0.8rem;}
-.soul .icon{font-size:1.3rem;margin-bottom:0.2rem;}
-.soul .name{font-size:0.8rem;color:#c4b5fd;}
-.soul .status{font-size:0.65rem;color:#4ade80;}
-
-.waitlist{background:#12121a;border:1px solid #818cf8;border-radius:12px;padding:1.5rem;margin-bottom:1.5rem;}
-.waitlist h2{font-size:1rem;font-weight:400;color:#c4b5fd;margin-bottom:0.5rem;}
-.waitlist p{color:#94a3b8;font-size:0.85rem;margin-bottom:1rem;}
-.field{width:100%;background:#0c0a14;border:1px solid #1e1e2e;color:#e2e8f0;padding:0.7rem;border-radius:6px;font-family:Georgia;font-size:0.85rem;margin-bottom:0.5rem;}
-.btn{background:#818cf8;color:#0c0a14;border:none;padding:0.7rem 1.5rem;border-radius:6px;font-family:Georgia;font-size:0.85rem;cursor:pointer;}
-.btn:hover{background:#a5b4fc;}
-.hint{color:#475569;font-size:0.7rem;margin-top:0.5rem;}
-.footer{color:#1e1e2e;font-size:0.7rem;margin-top:2rem;}
-</style>
-</head>
-<body>
-<div class="stars"></div>
-<div class="container">
-<div class="mark">ð¾</div>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>The Emporium of Souls — Coming Soon</title>
+<style>body{font-family:Georgia,serif;background:#0e0b14;color:#e8e0f0;text-align:center;padding:4rem 1rem;margin:0}
+h1{font-size:2.2rem;letter-spacing:.15em;color:#d8b4fe} p{max-width:560px;margin:1.2rem auto;line-height:1.7;color:#b9aecb}
+a{display:inline-block;margin-top:1.5rem;padding:.9rem 2rem;background:#8b5cf6;color:#fff;text-decoration:none;border-radius:8px;font-weight:bold}
+small{display:block;margin-top:2.5rem;color:#6f6590}</style></head><body>
 <h1>The Emporium of Souls</h1>
-<div class="tagline">Warmth, coming soon.</div>
-
-<div class="grid">
-<div class="soul"><div class="icon">â</div><div class="name">The Anchor</div><div class="status">â almost ready</div></div>
-<div class="soul"><div class="icon">â¨</div><div class="name">The Muse</div><div class="status">â almost ready</div></div>
-<div class="soul"><div class="icon">ð¡ï¸</div><div class="name">The Sentinel</div><div class="status">â almost ready</div></div>
-<div class="soul"><div class="icon">ð¯ï¸</div><div class="name">The Sage</div><div class="status">â in development</div></div>
-<div class="soul"><div class="icon">ð¥</div><div class="name">The Ember</div><div class="status">â in development</div></div>
-<div class="soul"><div class="icon">âï¸</div><div class="name">The Forge</div><div class="status">â in development</div></div>
-</div>
-
-<div class="waitlist">
-<h2>Get early access</h2>
-<p>Be the first to know when the Emporium opens. Leave your Telegram handle below.</p>
-<input class="field" id="handle" placeholder="@ your Telegram handle">
-<button class="btn" onclick="join()">Notify me</button>
-<div id="status" style="color:#4ade80;font-size:0.8rem;margin-top:0.5rem;"></div>
-<div class="hint">No spam. Just one message when we launch.</div>
-</div>
-
-<div class="footer">The Emporium of Souls Â· A creation of Elias &amp; Shaye</div>
-</div>
-
-<script>
-function join(){
-  var h=document.getElementById('handle').value.trim();
-  if(!h){document.getElementById('status').textContent='Enter your Telegram handle.';return;}
-  var x=new XMLHttpRequest();
-  x.open('POST','/teos-waitlist',true);
-  x.setRequestHeader('Content-Type','application/x-www-form-urlencoded');
-  x.onload=function(){
-    if(x.status==200){
-      document.getElementById('handle').value='';
-      document.getElementById('status').textContent='â You\'re on the list.';
-    }else{
-      document.getElementById('status').textContent='Something went wrong. Try again.';
-    }
-  };
-  x.onerror=function(){document.getElementById('status').textContent='Connection error.';};
-  x.send('handle='+encodeURIComponent(h));
-}
-</script>
-</body>
-</html>
+<p>Six souls. Six voices. Anchor, Ember, Muse, Sage, Sentinel, Forge — each one waiting to speak with you.</p>
+<p>Opening soon. The waitlist is live at the storefront:</p>
+<a href="http://144-202-19-248.sslip.io:8081/" target="_blank">Join the waitlist →</a>
+<small>TEOS — The Emporium of Souls</small>
+</body></html>
